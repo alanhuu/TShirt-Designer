@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>T-Shirt Designer</title>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+</head>
+<body>
+<!-- Website container -->
+  <div class="container-fluid">
+    <!-- Menu container -->
+    <ul>
+      <li><a class="upload">Upload</a></li>
+      <li>
+        <a class="text-insert">Text Insert</a>
+      </li>
+      <li><a class="load-saved">Load Saved Design</a></li>
+    </ul>
+    <div class="row">
+      <!-- Area for the different menu options to display. -->
+      <div class="col-sm-4">
+          <img class='menuArrow' src = "art/arrow.png">
+          <!-- Upload functionaliy -->
+          <div class = "menu-activity-area" id="uploads">
+            <div class ="inner-menu-area">
+            <span class="glyphicon glyphicon-cloud-upload"></span>
+              <h2>Upload your design here!</h2>
+              <h4>:D</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar"></div>
+              </div>
+          <button class="btn upload-btn" type="button">Upload File</button>
+          </div>
+        </div>
+        <!-- Text field edit to canvas menu -->
+        <div class ="menu-activity-area" id = "text-area">
+          <div class ="inner-menu-area">
+            <h2>Customize with text!</h2>
+            <br>
+            <button class="btn btn-success" id="text-button">Insert TextBox!</button>
+            <br>
+            <div id="text-controls">
+            <input type="color" value="" id="text-color" size="10">
+              <label for="font-family" style="display:inline-block">Font family:</label>
+              <select id="font-family">
+                <option value="arial">Arial</option>
+                <option value="helvetica" selected>Helvetica</option>
+                <option value="myriad pro">Myriad Pro</option>
+                <option value="delicious">Delicious</option>
+                <option value="verdana">Verdana</option>
+                <option value="georgia">Georgia</option>
+                <option value="courier">Courier</option>
+                <option value="comic sans ms">Comic Sans MS</option>
+                <option value="impact">Impact</option>
+                <option value="monaco">Monaco</option>
+                <option value="optima">Optima</option>
+                <option value="hoefler text">Hoefler Text</option>
+                <option value="plaster">Plaster</option>
+                <option value="engagement">Engagement</option>
+              </select>
+              <br>
+              <label for="text-align" style="display:inline-block">Text align:</label>
+              <select id="text-align">
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+                <option value="justify">Justify</option>
+              </select>
+              <div>
+                <label for="text-bg-color">Background color:</label>
+                <input type="color" value="" id="text-bg-color" size="10">
+              </div>
+              <div>
+                <label for="text-lines-bg-color">Background text color:</label>
+                <input type="color" value="" id="text-lines-bg-color" size="10">
+              </div>
+              <div>
+                <label for="text-stroke-color">Stroke color:</label>
+                <input type="color" value="" id="text-stroke-color">
+              </div>
+              <div>
+            
+
+                <label for="text-stroke-width">Stroke width:</label>
+                <input type="range" value="1" min="1" max="5" id="text-stroke-width">
+              </div>
+              <div>
+                <label for="text-font-size">Font size:</label>
+                <input type="range" value="" min="1" max="120" step="1" id="text-font-size">
+              </div>
+              <div>
+                <label for="text-line-height">Line height:</label>
+                <input type="range" value="" min="0" max="10" step="0.1" id="text-line-height">
+              </div>
+            </div>
+            <div id="text-controls-additional">
+              <input type='checkbox' name='fonttype' id="text-cmd-bold">
+                Bold
+            
+              <input type='checkbox' name='fonttype' id="text-cmd-italic">
+                Italic
+             
+              <input type='checkbox' name='fonttype' id="text-cmd-underline" >
+                Underline
+              
+              <input type='checkbox' name='fonttype' id="text-cmd-linethrough">
+                Linethrough
+             
+              <input type='checkbox' name='fonttype' id="text-cmd-overline" >
+                Overline
+
+            </div>
+
+            
+          </div>
+        </div>
+        <!-- Design load functionality via the menu -->
+        <div class = "menu-activity-area" id="load-saved-design">
+            <div class ="inner-menu-area">
+              <h2>Input your design id below!</h2>
+              <input type = "text" id = 'load-id-input'>
+              <button class = "btn btn-success" id = "load-button">Load</button>
+          </div>
+        </div>
+        <!-- This includes the utility buttons which are always showing. -->
+        <div class = 'utility-buttons'>
+          <button class="btn btn-danger" id = "undo-button"> Undo </button>
+          <button class="btn btn-success" id = "redo-button"> Redo </button>
+          <button class="btn btn-success" id = "save-button"> Save Design </button>
+        </div>
+      </div>
+
+      <!-- Canvas area -->
+      <div class="col-sm-8">
+          <canvas id="canvas"></canvas>
+              
+      </div>
+    </div>
+  </div>
+
+
+  <input id="upload-input" type="file" name="uploads[]" multiple="multiple"></br>
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="javascripts/fabric.js"></script>
+  <script src="javascripts/upload.js"></script>
+  <script src="javascripts/sweetalert.min.js"></script>
+</body>
+</html>

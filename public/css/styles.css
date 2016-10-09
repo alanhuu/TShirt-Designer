@@ -1,0 +1,136 @@
+.btn:focus, .upload-btn:focus{
+  outline: 0 !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /*text-align: center;*/
+  font-family: 'Raleway', sans-serif;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.upload-btn {
+  color: #ffffff;
+  background-color: #F89406;
+  border: none;
+}
+
+.upload-btn:hover,
+.upload-btn:focus,
+.upload-btn:active,
+.upload-btn.active {
+  color: #ffffff;
+  background-color: #FA8900;
+  border: none;
+}
+
+h4 {
+  padding-bottom: 30px;
+  color: #B8BDC1;
+}
+
+.glyphicon {
+  font-size: 2em;
+  color: #000000;
+}
+
+h2 {
+  margin-top: 15px;
+  color: #68757E;
+}
+
+
+#upload-input {
+  display: none;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: none !important;
+    background-color: #111;
+    cursor:pointer;
+}
+
+.menu-activity-area {
+  border-radius: 3px;
+  margin-top: 10px;
+  display: inline-block;
+      position: relative;
+    background-color: #eeeeee;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-bottom:20px;
+}
+.upload {
+  
+}
+
+#canvas {
+  height:100%; 
+  width:100%;
+  position:relative;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /*border: 1px solid black;*/
+
+}
+
+.inner-menu-area {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.menuArrow {
+  display:inline-block;
+}
+
+#text-area{
+  display:none;
+}
+
+#text-controls{
+  margin-top: 10px;
+}
+
+#utility-buttons {
+  margin-top:20px;
+
+}
+
+#redo-button {
+  margin-left: 20px;
+}
+#save-button {
+  margin-left: 20px;
+}
+#load-saved-design {
+  display:none;
+}

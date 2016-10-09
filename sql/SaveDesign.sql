@@ -1,0 +1,1 @@
+CREATE TABLE canvas_mappings (id int NOT NULL PRIMARY KEY AUTO_INCREMENT, canvasString varchar(20000));
